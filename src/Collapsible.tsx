@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
+import * as React from "react";
 
 interface CollapsibleProps {
   title: string;

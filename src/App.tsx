@@ -22,16 +22,32 @@ const MainContainer = styled.div`
   box-sizing: border-box;
 `
 
+type MyData = {
+  title: string;
+  link: string;
+}
+
 function App() {
+  const myData: MyData[] = [
+    {
+      title: "Beltelecom",
+      link: "https://pbx.beltelecom.by/dashboard",
+    },
+    {
+      title: "Synology",
+      link: "https://10-128-5-2.drive-bbv.direct.quickconnect.to:8001/",
+    }
+  ]
+
   return (
     <MainContainer>
       <Container>
         <h2>Полезные ссылки</h2>
 
         <Collapsible title="Админки сервисов">
-          <CollapsibleItem href="https://pbx.beltelecom.by/dashboard">Beltelecom</CollapsibleItem>
-          <Hr/>
-          <CollapsibleItem href="https://10-128-5-2.drive-bbv.direct.quickconnect.to:8001/">Synology</CollapsibleItem>
+          {myData.map((item: MyData) => (
+              <CollapsibleItem href={item.link}>{item.title}</CollapsibleItem>
+          ))}
         </Collapsible>
       </Container>
     </MainContainer>
