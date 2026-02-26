@@ -27,7 +27,8 @@ const Collapsible = ({ title, children }: CollapsibleProps) => {
 
 const styles: { [key: string]: React.CSSProperties } = {
   container: {
-    width: "300px",
+    marginTop: "10px",
+    width: "100%",
     border: "1px solid #ccc",
     borderRadius: "6px",
     margin: "0",
