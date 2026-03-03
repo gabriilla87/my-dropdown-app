@@ -67,7 +67,7 @@ function App() {
   return (
     <MainContainer>
       <Container>
-        <h2>Полезные ссылки</h2>
+        <h2>Сервисы</h2>
 
         <Collapsible title="Админки сервисов">
           {myData.map((item: MyData, index) => (
