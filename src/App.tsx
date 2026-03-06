@@ -63,6 +63,111 @@ function App() {
             ]
         },
         {
+            listTitle: "1c мои данные",
+            listItemsData: [
+                {
+                    listItemTitle: "Логин",
+                    content: "srv1c.local\\kaziuchuts.v",
+                    type: "text",
+                },
+                {
+                    listItemTitle: "Пароль",
+                    content: "uxyYYfu4aTj!K2!",
+                    type: "text",
+                },
+            ]
+        },
+        {
+            listTitle: "Почта",
+            listItemsData: [
+                {
+                    listItemTitle: "Сервер",
+                    content: "ms6.g-cloud.by",
+                    type: "text",
+                },
+                {
+                    listItemTitle: "Логин",
+                    content: "kaziuchuts.v@belblank.by",
+                    type: "text",
+                },
+                {
+                    listItemTitle: "Пароль",
+                    content: "kzfm4j3ESg2CRA",
+                    type: "text",
+                },
+            ]
+        },
+        {
+            listTitle: "Для добавления rdp",
+            listItemsData: [
+                {
+                    listItemTitle: "Префикс имени пользователя",
+                    content: "srv1c.local\\[имя пользователя]",
+                    type: "text",
+                },
+            ]
+        },
+        {
+            listTitle: "1c сервер Документооборот",
+            listItemsData: [
+                {
+                    listItemTitle: "Сервер",
+                    content: "192.168.13.60",
+                    type: "text",
+                },
+                {
+                    listItemTitle: "Имя",
+                    content: "UZD_DO_EE",
+                    type: "text",
+                },
+            ]
+        },
+        {
+            listTitle: "1c сервер МБ",
+            listItemsData: [
+                {
+                    listItemTitle: "Сервер",
+                    content: "192.168.13.12",
+                    type: "text",
+                },
+                {
+                    listItemTitle: "Имя",
+                    content: "MB_PE",
+                    type: "text",
+                },
+            ]
+        },
+        {
+            listTitle: "1c сервер УТ",
+            listItemsData: [
+                {
+                    listItemTitle: "Сервер",
+                    content: "ws-cluster1,ws-cluster2",
+                    type: "text",
+                },
+                {
+                    listItemTitle: "Имя",
+                    content: "YT_PE",
+                    type: "text",
+                },
+            ]
+        },
+        {
+            listTitle: "1c сервер ЗП",
+            listItemsData: [
+                {
+                    listItemTitle: "Сервер",
+                    content: "192.168.13.12",
+                    type: "text",
+                },
+                {
+                    listItemTitle: "Имя",
+                    content: "MZ_PE",
+                    type: "text",
+                },
+            ]
+        },
+        {
             listTitle: "Synology камеры",
             listItemsData: [
                 {
