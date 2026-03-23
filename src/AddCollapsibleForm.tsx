@@ -1,5 +1,6 @@
 import {useState} from "react";
 import styled from "styled-components";
+import {useStore} from "./store.ts";
 
 // type Props = {
 //     onChange?: (event: SyntheticEvent<HTMLInputElement>) => void,
@@ -31,16 +32,18 @@ const DownerBlock = styled.div`
 
 export const AddCollapsibleForm = () => {
     const [textValue, setTextValue] = useState<string>("")
-    const [isCollapsded, setIsCollapsed] = useState(false)
+    const [isCollapsed, setIsCollapsed] = useState(false)
+
+    const {addCollapsibleDataItem} = useStore()
 
     return (
         <Wrapper>
             <UpperBlock>
                 <StyledInput onChange={(e) => setTextValue(e.currentTarget.value)} value={textValue} />
-                <button>Создать</button>
+                <button onClick={() => addCollapsibleDataItem(textValue)}>Создать</button>
             </UpperBlock>
             <DownerBlock>
-                <input type="checkbox" checked={isCollapsded} onChange={() => setIsCollapsed(!isCollapsded)} />
+                <input type="checkbox" checked={isCollapsed} onChange={() => setIsCollapsed(!isCollapsed)} />
             </DownerBlock>
         </Wrapper>
     )

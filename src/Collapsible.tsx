@@ -1,15 +1,19 @@
 import {useState} from "react";
 import styled from "styled-components";
-import type {listItemData} from "./App.tsx";
 import {CollapsibleItem} from "./CollapsibleItem.tsx";
+import {type ListItemData} from "./store.ts";
+// import {useStore} from "./store.ts"
+// import * as React from "react";
 
 interface CollapsibleProps {
+    id: string;
     title: string;
-    listItemsData: listItemData[];
+    listItemsData: ListItemData[];
     defaultOpen?: boolean;
 }
 
 const Collapsible = ({
+                         // id,
                          title,
                          listItemsData,
                          defaultOpen = false,
@@ -18,11 +22,18 @@ const Collapsible = ({
 
     const toggle = () => setIsOpen((prev) => !prev);
 
+    // const {deleteCollapsibleDataItem} = useStore();
+    // const deleteItem = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, id: string) => {
+    //     e.stopPropagation()
+    //     deleteCollapsibleDataItem(id)
+    // }
+
     return (
         <Container>
             <Header onClick={toggle}>
                 <Title>{title}</Title>
-                <Icon $isOpen={isOpen}>{isOpen ? "▲" : "▼"}</Icon>
+                <Icon $isOpen={isOpen}>{isOpen ? "▼" : "▼"}</Icon>
+                {/*<button onClick={(e) => deleteItem(e, id)}>x</button>*/}
             </Header>
 
             {
@@ -30,7 +41,7 @@ const Collapsible = ({
                 &&
                 <Content>
                     {
-                        listItemsData.map((listItemData: listItemData, index) => {
+                        listItemsData.map((listItemData: ListItemData, index) => {
                             const {type, content, listItemTitle} = listItemData;
 
                             return <CollapsibleItem originalText={listItemTitle}
