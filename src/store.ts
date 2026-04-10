@@ -41,6 +41,22 @@ export const useStore = create<StoreData>((set) => ({
         },
         {
             id: uuidv4(),
+            listTitle: "id сервер Ассистента",
+            listItemsData: [
+                {
+                    listItemTitle: "id.bbv.by",
+                    content: "id.bbv.by",
+                    type: "text",
+                },
+                {
+                    listItemTitle: "44334",
+                    content: "44334",
+                    type: "text",
+                }
+            ]
+        },
+        {
+            id: uuidv4(),
             listTitle: "1c мои данные",
             listItemsData: [
                 {
